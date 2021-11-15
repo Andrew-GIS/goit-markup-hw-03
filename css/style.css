@@ -49,6 +49,7 @@ img {
   --background-section-color: #f5f4fa;
   --portfoilio-border-color: #eeeeee;
   --footer-address-color: rgba(255, 255, 255, 0.6);
+  --border-header-color: #ececec;
 }
 
 body {
@@ -65,15 +66,21 @@ body {
   width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
-  /* outline: 2px solid tomato; */
+}
+
+.section {
+  padding: 94px 0px;
 }
 
 /*--Logo styles-------------------------------------*/
+.header {
+  border-bottom: 1px solid var(--border-header-color);
+}
+
 .header .conteiner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: auto; */
 }
 
 .logo {
@@ -102,10 +109,6 @@ body {
 .navigation-links-list {
   display: flex;
 }
-
-/* .navigation {
-  margin-right: 331px;
-} */
 
 .navigation-links-list .navigation-links-item.current {
   color: var(--accent-color);
@@ -156,7 +159,7 @@ body {
 }
 
 /*--Hero styles-------------------------------------*/
-.hero-section {
+.section-hero {
   background-color: var(--additional-color);
   text-align: center;
   padding-top: 200px;
@@ -188,9 +191,6 @@ body {
 }
 
 /*--Features styles-------------------------------------*/
-.features-section {
-  padding: 94px 0px;
-}
 .features-list {
   display: flex;
 }
@@ -215,8 +215,8 @@ body {
 }
 
 /*--"What we do" section styles-------------------------------------*/
-.what-we-do-section {
-  padding-bottom: 94px;
+.what-we-do {
+  padding-top: 0px;
 }
 
 .what-we-do-list {
@@ -244,7 +244,6 @@ body {
 /*--"Our Team" Section styles-------------------------------------*/
 .our-team {
   background-color: var(--background-section-color);
-  padding: 94px 0px;
 }
 
 .our-team-list {
@@ -277,7 +276,7 @@ body {
 }
 
 .item-img {
-  margin: 0px 0px 30px 0px;
+  margin-bottom: 30px;
 }
 
 .item-name {
@@ -292,10 +291,6 @@ body {
 }
 
 /*--Portfolio Section styles-------------------------------------*/
-.porfolio-section {
-  padding: 94px 0px;
-}
-
 .portfolio-btn-list {
   margin: 0px 280px 34px 280px;
   display: flex;
@@ -343,14 +338,14 @@ body {
 }
 
 .portfolio-list-item {
-  border: 1px solid var(--portfoilio-border-color);
+  border-bottom: 1px solid var(--portfoilio-border-color);
   width: 370px;
 }
 .portfolio-list-item:not(:nth-child(3n + 3)) {
   margin-right: 30px;
 }
 
-.portfolio-list-item:not(:nth-child(n + 7):nth-child(-n + 9)) {
+.portfolio-list-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 
@@ -383,7 +378,7 @@ body {
 }
 
 /*--Footer Section styles-------------------------------------*/
-.footer-section {
+.footer {
   background-color: var(--additional-color);
   padding: 60px 0px;
 }
